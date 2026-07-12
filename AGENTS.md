@@ -16,7 +16,7 @@ There is no app server required; open `index.html` directly in a browser after b
 
 ## Coding Style & Naming Conventions
 
-Use two-space indentation for HTML and CSS. This repository should remain 100% Tailwind for styling: do not add custom CSS selectors, component classes, inline `style` attributes, or handwritten CSS rules for layout or visuals. Express changes with Tailwind utilities in `index.html`; when a new design value is unavoidable, add only a token in the `@theme` block and use it through Tailwind classes. Keep token names descriptive and consistent with the existing `portrait-*` color pattern.
+Use two-space indentation for HTML and CSS. This repository should remain 100% Tailwind for styling: do not add custom CSS selectors, component classes, inline `style` attributes, or handwritten CSS rules for layout or visuals. Express changes with Tailwind utilities in `index.html`. Do not hardcode color values in HTML, including arbitrary color utilities with hex, RGB, HSL, or OKLCH values; add custom colors to the `@theme` block first, then use the generated Tailwind color utilities. Keep token names descriptive and consistent with the existing `portrait-*` color pattern.
 
 Use lowercase, hyphenated file names for assets, for example `me-3.webp` or `project-icon.svg`. Keep accessibility attributes on interactive elements, including `aria-label`, `title`, `target="_blank"`, and `rel="noopener noreferrer"` for external links.
 
@@ -32,4 +32,4 @@ Pull requests should include a brief summary, screenshots for visual changes, an
 
 ## Agent-Specific Instructions
 
-Do not edit `assets/output.css` by hand. Do not add new custom CSS to `input.css`; limit it to Tailwind imports, `@font-face`, and `@theme` tokens. Make visual changes in `index.html` with Tailwind utilities, then rebuild with `npm run build:styles` so generated CSS stays reproducible.
+Do not edit `assets/output.css` by hand. Do not add new custom CSS to `input.css`; limit it to Tailwind imports, `@font-face`, and `@theme` tokens. Any new project color must be defined in `@theme` before it is used in markup. Make visual changes in `index.html` with Tailwind utilities, then rebuild with `npm run build:styles` so generated CSS stays reproducible.

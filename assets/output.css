@@ -38,6 +38,7 @@
     --color-portrait-olive: #4f6238;
     --color-portrait-teal: #2f5f5c;
     --color-portrait-espresso: #241b16;
+    --color-portrait-shadow: #241b16;
     --color-portrait-sky: #78b7c8;
     --color-portrait-plum: #6f4d7a;
   }
@@ -521,9 +522,15 @@
   .text-portrait-teal {
     color: var(--color-portrait-teal);
   }
-  .shadow-\[10px_10px_0_rgb\(36_27_22_\/_0\.35\)\] {
-    --tw-shadow: 10px 10px 0 var(--tw-shadow-color, rgb(36 27 22 / 0.35));
+  .shadow-\[10px_10px_0\] {
+    --tw-shadow: 10px 10px 0 var(--tw-shadow-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-portrait-shadow\/35 {
+    --tw-shadow-color: color-mix(in srgb, #241b16 35%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-portrait-shadow) 35%, transparent) var(--tw-shadow-alpha), transparent);
+    }
   }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
@@ -570,10 +577,10 @@
       }
     }
   }
-  .hover\:shadow-\[10px_10px_0_rgb\(36_27_22_\/_0\.35\)\] {
+  .hover\:shadow-\[10px_10px_0\] {
     &:hover {
       @media (hover: hover) {
-        --tw-shadow: 10px 10px 0 var(--tw-shadow-color, rgb(36 27 22 / 0.35));
+        --tw-shadow: 10px 10px 0 var(--tw-shadow-color, currentcolor);
         box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
       }
     }
