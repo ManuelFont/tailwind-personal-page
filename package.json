@@ -1,0 +1,23 @@
+{
+  "name": "tailwind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:styles": "tailwindcss -i ./input.css -o ./assets/output.css",
+    "watch:styles": "tailwindcss -i ./input.css -o ./assets/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@midudev/tailwind-animations": "^1.0.1",
+    "@tailwindcss/cli": "^4.3.2",
+    "tailwindcss": "^4.3.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.5",
+    "prettier-plugin-tailwindcss": "^0.8.0"
+  }
+}
