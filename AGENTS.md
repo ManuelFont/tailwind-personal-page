@@ -32,4 +32,4 @@ Pull requests should include a brief summary, screenshots for visual changes, an
 
 ## Agent-Specific Instructions
 
-Do not edit `assets/output.css` by hand. Do not add new custom CSS to `input.css`; limit it to Tailwind imports, `@font-face`, and `@theme` tokens. Any new project color must be defined in `@theme` before it is used in markup. Make visual changes in `index.html` with Tailwind utilities, then rebuild with `npm run build:styles` so generated CSS stays reproducible.
+Do not run commands in this repository. Do not edit `assets/output.css` by hand. Do not add new custom CSS to `input.css`; limit it to Tailwind imports, `@font-face`, and `@theme` tokens. Any new project color must be defined in `@theme` before it is used in markup. Make visual changes in `index.html` with Tailwind utilities; leave generated CSS updates to the project owner.
